@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Geometry-Guided Modeling of Foundation Features Enables Generalizable Object Shape Deformation Learning — ICML 2026">
+    <meta name="keywords" content="3D reconstruction, shape deformation, flow matching, foundation models, ICML">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GODeform — Generalizable Object Shape Deformation Learning (ICML 2026)</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-3 publication-title">Geometry-Guided Modeling of Foundation Features Enables<br>Generalizable Object Shape Deformation Learning</h1>
+                        <h3 class="title is-4 conference-authors">
+                            <a target="_blank" rel="noopener" href="https://icml.cc/">ICML 2026</a>
+                        </h3>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><a href="https://yiyao-ma.github.io/">Yiyao Ma<sup>1</sup></a>,</span>
+                            <span class="author-block"><a href="https://ck-kai.github.io/">Kai Chen<sup>1</sup></a>,</span>
+                            <span class="author-block">Zhongxiang Zhou<sup>2</sup>,</span>
+                            <span class="author-block">Zhuheng Song<sup>1</sup>,</span>
+                            <span class="author-block">Dongsheng Xie<sup>1</sup>,</span><br>
+                            <span class="author-block">Zelong Tan<sup>1</sup>,</span>
+                            <span class="author-block">Rong Xiong<sup>2,3</sup>,</span>
+                            <span class="author-block"><a href="https://www.cse.cuhk.edu.hk/~qdou/index.html">Qi Dou<sup>1</sup></a></span>
+                        </div>
+                        <br>
+                        <div class="is-size-6 publication-authors">
+                            <span class="author-block"><sup>1</sup>Department of Computer Science and Engineering, The Chinese University of Hong Kong</span>
+                        </div>
+                        <div class="is-size-6 publication-authors">
+                            <span class="author-block"><sup>2</sup>Zhejiang Humanoid Robot Innovation Center Co., Ltd</span>
+                        </div>
+                        <div class="is-size-6 publication-authors">
+                            <span class="author-block"><sup>3</sup>State Key Laboratory of Industrial Control Technology and Institute of Cyber-Systems and Control, Zhejiang University</span>
+                        </div>
+                        <!-- <div class="is-size-6 publication-authors">
+                            <span class="author-block"><sup>†</sup>Corresponding authors</span>
+                        </div> -->
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark" title="Replace with arXiv or camera-ready PDF when available">
+                                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fab fa-github"></i></span>
+                                        <span>Code (Coming Soon)</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="content has-text-centered">
+        <div class="container is-max-widescreen px-4">
+            <img src="./static/paper_images/teaser.png" alt="Teaser: generalizable shape deformation and applications" style="max-width:90%; height:auto;">
+            <div class="content has-text-centered" style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                <b>Figure 1</b>. Our framework can handle large template–target shape variations, diverse viewpoints, and unseen categories, and supports downstream dexterous manipulation.
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Monocular 3D shape recovery is fundamental to geometric understanding, yet achieving robust generalization across arbitrary viewpoints and unseen object categories remains a significant challenge.
+                            In this paper, we present a generalizable deformation learning framework that reconstructs 3D objects by explicitly deforming a category-level shape template to match the target observation.
+                            To address complex shape variations between the template and the target, we introduce a geometry-guided feature modeling mechanism. This process first enriches foundation features with template topology to yield a geometry-aware representation, which is then explicitly correlated with the target observation to guide precise deformation.
+                            Furthermore, to bridge the disparity between the fixed template and arbitrary target views, we propose a view-adaptive feature aggregation module. This module leverages multi-view template features and their corresponding camera poses to enrich the canonical template representation, ensuring robust feature alignment regardless of the target's perspective.
+                            Extensive experiments demonstrate that our approach significantly outperforms state-of-the-art methods in handling large shape variations and diverse viewpoints, exhibiting strong generalization to novel categories and effectively supporting downstream real-world dexterous robotic manipulation tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Contributions</h2>
+                    <div class="content has-text-justified">
+                        <ul>
+                            <li>We propose a generalizable deformation learning framework that reconstructs 3D objects by explicitly deforming category-level templates, leveraging robust 2D foundation model features to generalize to unseen categories.</li>
+                            <li>We introduce geometry-guided feature modeling that enriches foundation features with template topology for precise point-wise correspondences under complex shape variations.</li>
+                            <li>We design a view-adaptive feature aggregation module with camera pose embeddings to reduce viewpoint bias and stabilize deformation under large viewpoint disparity.</li>
+                            <li>Extensive experiments show strong generalization across viewpoints, shape variations, and novel categories, and we demonstrate generalizable dexterous manipulation in the real world.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We formulate single-view reconstruction as <em>geometry-guided shape deformation</em>: given a target RGB image and a category-level 3D template, we predict a per-point deformation field that aligns the template with the observed shape using a conditional flow matching framework.
+                            This deformation is conditioned on the geometry-guided modeling of 2D foundation features of template and target observation.
+                            To ensure these features are spatially aligned and robust to varying observation angles, 
+                            we introduce two key components: (1) a geometry-guided feature modeling process, which diffuses lifted 2D features across the 3D template surface to bridge the domain gap; 
+                            and (2) a view-adaptive feature aggregation module, which synthesizes a pose-aware, viewpoint-invariant feature map to compensate for self-occlusions.
+                        </p>
+                        <div class="figure" style="text-align:center; margin-top: 1rem;">
+                            <img src="./static/paper_images/method.png" alt="Method overview" style="max-width:100%; height:auto;">
+                            <div class="content has-text-centered" style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                                <b>Figure 2</b>. Overview: conditional flow matching warps the template toward the target, conditioned on geometry-guided foundation features and view-adaptive multi-view aggregation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-full-width has-text-centered">
+                    <h2 class="title is-3">Results</h2>
+
+                    <h3 class="title is-4" style="margin-top: 1rem;">Deformation quality </h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            On both seen and unseen categories, our method achieves lower Chamfer distance and EMD and higher silhouette IoU than deformation baselines.
+                            Under the <em>Random Template</em> setting—where baselines degrade sharply—our geometry-guided modeling maintains performance similar to <em>Retrieved Template</em>, indicating robustness to large template–target variation.
+                        </p>
+                    </div>
+
+                    <div class="content has-text-centered" style="margin: 1rem 0;">
+                        <img src="./static/paper_images/table_deform.png" alt="Main quantitative results: deformation methods" style="max-width:90%; height:auto;" class="result-image">
+                        <div style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                            <b>Table 1</b>. Performance on seen and unseen categories with retrieved vs. random templates. Our-SV and Our-MV refer to our method <br> using single-view template and multi-view template feature fusion, respectively.
+                        </div>
+                    </div>
+
+                    <div class="content has-text-centered" style="margin: 1.5rem 0;">
+                        <img src="./static/paper_images/flow.png" alt="Qualitative comparison with deformation baselines" style="max-width:90%; height:auto;" class="result-image">
+                        <div style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                            <b>Figure 3</b>. Qualitative comparison with shape deformation methods under the <em>Random Template</em> setting (e.g., large topology changes).
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <h3 class="title is-4" style="margin-top: 1.5rem;">Comparison with 3D generative reconstruction</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            Compared to large reconstruction models, our template deformation better preserves plausible structure under occlusion (e.g., mug handles, chair legs) by leveraging the template topology.
+                        </p>
+                    </div>
+                    <div class="content has-text-centered" style="margin: 1rem 0;">
+                        <img src="./static/paper_images/cmp_gen.png" alt="Comparison with 3D generative methods" style="max-width:90%; height:auto;" class="result-image">
+                        <div style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                            <b>Figure 4</b>. Quantitative and qualitative comparisons with 3D generative methods on single-view reconstruction.
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <h3 class="title is-4" style="margin-top: 1.5rem;">Application to robotic dexterous manipulation</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            A distinct advantage of our deformation-based framework is the inherent preservation of dense point-wise correspondence, 
+                            which naturally facilitates downstream tasks such as dexterous grasp transfer.
+                            We leverage the predicted deformation fields to warp contact maps from templates to novel targets, 
+                            guiding the optimization of grasp configurations for arbitrary robotic hands. 
+                            This transfer-based dexterous grasp generation process requires only about 0.67 s for deformation prediction and 15 s for contact-based grasp recovery.
+                            We further demonstrate the practical applicability of our approach through real-world physical experiments on a NAVIAI AW-1 humanoid robot.
+                        </p>
+                    </div>
+                    <div class="content has-text-centered" style="margin: 1rem 0;">
+                        <img src="./static/paper_images/supp_more_grasp.png" alt="Grasp simulation results" style="max-width:100%; height:auto;" class="result-image">
+                        <div style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                            <b>Figure 5</b>. Contact map and grasp transfer across objects and hands (red / blue: high / low contact).
+                        </div>
+                    </div>
+                    <div class="content has-text-centered" style="margin: 1rem 0;">
+                        <img src="./static/paper_images/realrobot.png" alt="Real robot experiments" style="max-width:100%; height:auto;" class="result-image">
+                        <div style="color: gray; font-size: 10pt; margin-top: 0.5rem;">
+                            <b>Figure 6</b>. Real-world generalizable dexterous manipulation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">Citation</h2>
+            <p>If you find this work useful, please cite:</p>
+            <pre><code>@inproceedings{ma2026godeform,
+  title     = {Geometry-Guided Modeling of Foundation Features Enables Generalizable Object Shape Deformation Learning},
+  author    = {Ma, Yiyao and Chen, Kai and Zhou, Zhongxiang and Song, Zhuheng and Xie, Dongsheng and Tan, Zelong and Xiong, Rong and Dou, Qi},
+  booktitle = {Proceedings of the International Conference on Machine Learning},
+  year      = {2026}
+}</code></pre>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            Page template adapted from
+                            <a href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
